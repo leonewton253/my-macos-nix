@@ -26,11 +26,11 @@
       # customize dock
       dock = {
         autohide = true;
-        show-recents = false;  # disable recent apps
+        show-recents = true;  # disable recent apps
 
         # customize Hot Corners(触发角, 鼠标移动到屏幕角落时触发的动作)
         wvous-tl-corner = 2;  # top-left - Mission Control
-        wvous-tr-corner = 13;  # top-right - Lock Screen
+        #wvous-tr-corner = 13;  # top-right - Lock Screen
         wvous-bl-corner = 3;  # bottom-left - Application Windows
         wvous-br-corner = 4;  # bottom-right - Desktop
       };
@@ -49,8 +49,8 @@
       trackpad = {
         # tap - 轻触触摸板, click - 点击触摸板
         Clicking = true;  # enable tap to click(轻触触摸板相当于点击)
-        TrackpadRightClick = true;  # enable two finger right click
-        TrackpadThreeFingerDrag = true;  # enable three finger drag
+        #TrackpadRightClick = true;  # enable two finger right click
+        #TrackpadThreeFingerDrag = false;  # enable three finger drag
       };
 
       # customize settings that not supported by nix-darwin directly
@@ -69,7 +69,7 @@
         # sets how long it takes before it starts repeating.
         InitialKeyRepeat = 15;  # normal minimum is 15 (225 ms), maximum is 120 (1800 ms)
         # sets how fast it repeats once it starts. 
-        KeyRepeat = 3;  # normal minimum is 2 (30 ms), maximum is 120 (1800 ms)
+        KeyRepeat = 5;  # normal minimum is 2 (30 ms), maximum is 120 (1800 ms)
 
         NSAutomaticCapitalizationEnabled = false;  # disable auto capitalization(自动大写)
         NSAutomaticDashSubstitutionEnabled = false;  # disable auto dash substitution(智能破折号替换)
@@ -97,7 +97,7 @@
         };
         "com.apple.finder" = {
           ShowExternalHardDrivesOnDesktop = true;
-          ShowHardDrivesOnDesktop = true;
+          ShowHardDrivesOnDesktop = false;
           ShowMountedServersOnDesktop = true;
           ShowRemovableMediaOnDesktop = true;
           _FXSortFoldersFirst = true;
@@ -114,10 +114,10 @@
         };
         "com.apple.WindowManager" = {
           EnableStandardClickToShowDesktop = 0; # Click wallpaper to reveal desktop
-          StandardHideDesktopIcons = 0; # Show items on desktop
-          HideDesktop = 0; # Do not hide items on desktop & stage manager
-          StageManagerHideWidgets = 0;
-          StandardHideWidgets = 0;
+          StandardHideDesktopIcons = 1; # Show items on desktop
+          HideDesktop = 1; # Do not hide items on desktop & stage manager
+          StageManagerHideWidgets = 1;
+          StandardHideWidgets = 1;
         };
         "com.apple.screensaver" = {
           # Require password immediately after sleep or screen saver begins
@@ -130,7 +130,7 @@
 
       loginwindow = {
         GuestEnabled = false;  # disable guest user
-        SHOWFULLNAME = true;  # show full name in login window
+        SHOWFULLNAME = false;  # show full name in login window
       };
     };
 
@@ -142,7 +142,7 @@
 
       # NOTE: do NOT support remap capslock to both control and escape at the same time
       remapCapsLockToControl = false;  # remap caps lock to control, useful for emac users
-      remapCapsLockToEscape  = true;   # remap caps lock to escape, useful for vim users
+      remapCapsLockToEscape  = false;   # remap caps lock to escape, useful for vim users
 
       # swap left command and left alt 
       # so it matches common keyboard layout: `ctrl | command | alt`
