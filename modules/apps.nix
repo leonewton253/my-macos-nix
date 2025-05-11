@@ -21,11 +21,13 @@
     git
     fish
     eza
-    neovim
+    helix
+    helix-gpt
     just
     yazi
     mosh
     wget
+    btop
     #yazi deps
     ffmpeg 
     p7zip 
@@ -35,6 +37,7 @@
     ripgrep 
     fzf 
     zoxide
+    go
   ];
 
 }
